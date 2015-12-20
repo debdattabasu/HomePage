@@ -2,13 +2,13 @@ import * as React from "react";
 import * as _ from "lodash"
 import * as Radium from "radium";
 
-export interface GridItemProps extends React.Props<GridItem> {
+export interface TileItemProps extends React.Props<TileItem> {
   columnSpan?: number;
 }
 
 
-export class GridItem extends React.Component<GridItemProps, {}> {
-  static defaultProps: GridItemProps = {
+export class TileItem extends React.Component<TileItemProps, {}> {
+  static defaultProps: TileItemProps = {
     columnSpan: 1,
   }
   
@@ -28,7 +28,7 @@ export class GridItem extends React.Component<GridItemProps, {}> {
   }
 }
 
-class GridLayoutProcessor {
+class TileLayoutProcessor {
   gutterWidth: number; 
   numColumns: number;
   columnHeights: number[];
@@ -115,29 +115,29 @@ class GridLayoutProcessor {
 }
 
 
-export interface GridLayoutProps extends React.Props<GridLayout> {
+export interface TileLayoutProps extends React.Props<TileLayout> {
   gutterWidth?: number;
   columnWidth?: number;
   style?: Object;
   align?: string;
 }
 
-interface GridLayoutState {
+interface TileLayoutState {
   childHeights: number[];
   width: number;
 }
 
 @Radium
-export class GridLayout extends React.Component<GridLayoutProps, GridLayoutState> {
+export class TileLayout extends React.Component<TileLayoutProps, TileLayoutState> {
   
-  static defaultProps : GridLayoutProps = {
+  static defaultProps : TileLayoutProps = {
     gutterWidth: 0, 
     columnWidth: 256, 
     style: {}, 
     align: "start"
   }
 
-  state: GridLayoutState = {
+  state: TileLayoutState = {
     childHeights: [],
     width: 720
   }
@@ -174,10 +174,10 @@ export class GridLayout extends React.Component<GridLayoutProps, GridLayoutState
   render() {
     
     var children = React.Children.map(this.props.children, (child: React.ReactElement<any>) => 
-    child.type === GridItem? child: null).filter(child => child != null);
+    child.type === TileItem? child: null).filter(child => child != null);
     
 
-    var layoutProcessor = new GridLayoutProcessor(this.state.width, this.props.gutterWidth, this.props.columnWidth, this.props.align); 
+    var layoutProcessor = new TileLayoutProcessor(this.state.width, this.props.gutterWidth, this.props.columnWidth, this.props.align); 
     
     var wrappedChildren = children.map((child, idx) => {
       var props = layoutProcessor.positionItem(this.state.childHeights[idx], child.props.columnSpan);

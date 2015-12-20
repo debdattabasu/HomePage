@@ -45,7 +45,7 @@ export class AboutPage extends React.Component<{}, {}> {
 			backgroundPosition: 'center', 
 			backgroundSize: 'cover', 
 			backgroundRepeat: 'no-repeat',
-			backgroundImage: 'url(https://scontent-hkg3-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/11145166_963568530332104_6985097467841199592_n.jpg?oh=7057e3f4a90467ddf347e0246a68b257&oe=56D3F680)'
+			backgroundImage: `url(${require('../media/MyFace.jpg')})`
 		},
 		
 		card: {
@@ -65,32 +65,25 @@ export class AboutPage extends React.Component<{}, {}> {
 					<FlexLayout direction="row">
 						<FlexLayout direction="column" size="50%" style={{marginRight:32}}>
 							<p style={this.styles.para}>
-								I'm a Swedish engineer that loves working with interactivity, graphics and animation.
-								I'm motivated by a need to create distracting interactive contraptions and obsessive about 
-								pushing the open web into unexpected places.
+								I'm an Indian engineer that loves working with user interfaces, games, graphics and animation. I graduated in 2013
+								with a B.Tech in Electronics and Communication Engineering from Indian Institute of Technology, Roorkee. I find motivation in creating beautiful
+								imagery and experiences through software.
 							</p>
-							
-							<p style={this.styles.para}>
-								Currently working full time on Slides, which I also co-founded. 
-								It's a platform for creating, presenting and sharing presentations.
-							</p>
-							
-							<p style={this.styles.para}>
-								My work experience includes campaign sites in Flash, web apps in HTML, 
-								experimental HTML5 and CSS3 projects as well as mobile development. 
-								My personal projects have received a resounding amount appreciation, 
-								they were served to over 140,000,000 people around the globe in the past year alone.
-							</p>
-							
-							<p style={this.styles.para}>
-								In the past I have worked as Senior Interactive Developer at Fi, Lead Interactive Developer 
-								at Qwiki and Lead Interface Engineer at Squarespace.
 
+							<p style={this.styles.para}>
+								My knowledge and experience encompasses a wide range of domains related to Real Time Graphics, Game Development
+								and Rich User Interfaces.
+							</p>	
+							
+							<p style={this.styles.para}>
+							 I have worked with DirectX and OpenGL, written shaders and rendering algorithms, 
+								made games in Unity, created web apps with AngularJS and React, and written server code in NodeJS. 
+								I am fluent in C++, C#, Java, Javascript, Coffeescript and Typescript. 
 							</p>
 							
 							<p style={this.styles.para}>
-								During my time with Fi I led the development of both small and large-scale projects for 
-								clients such as Google, BBC, Nintendo, Wacom and SAS.
+								I am currently lead mentor for Computer Graphics and Game Programming at Backstage Pass Institute of Gaming and Technology. 
+								In the past I have worked as Driver Engineer at ThinCI Semiconductors, Software Engineer at Junglee Games.  
 							</p>
 						</FlexLayout>
 						

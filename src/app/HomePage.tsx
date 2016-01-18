@@ -105,7 +105,8 @@ export class HomePage extends React.Component<{}, {}> {
 					<TileItem columnSpan={2}>
 						<div style={this.styles.card}>
 							<h2 style={this.styles.heading}>DOTBUSTER</h2>
-							<div key="0_0" style={[this.styles.pic, this.getImage('Dotbuster.jpg', 420, Palette.get('Green', '600'))]}/>
+							<div key="0_0" style={[this.styles.pic, this.getImage('Dotbuster.jpg', 420, Palette.get('Green', '600'))]} 
+              onClick={()=> window.open("https://sliprift.com/game/play/dotbuster", "_blank")}/>
 
 							<p style={this.styles.para}>
 								Dotbuster is a deceptively simple, surprisingly addictive arcade game playable online. Was initially built for 
@@ -114,7 +115,7 @@ export class HomePage extends React.Component<{}, {}> {
 							</p>
 
 							<FlexLayout justify="end" style={{marginTop: 20}}>
-								<a key="0_1" style={this.styles.button} href="https://sliprift.com/game/play/dotbuster" target="_blank"> Play On Sliprift </a>
+								<a key="0_1" style={this.styles.button} href="https://sliprift.com/game/play/dotbuster" target="_blank"> Play Online </a>
 								<a key="0_2" style={this.styles.button} href="https://github.com/debdattabasu/DotbusterWeb" target="_blank"> View On GitHub </a>
 							</FlexLayout>
 								
